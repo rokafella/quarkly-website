@@ -21,8 +21,9 @@ export default (() => {
 			color="--light"
 			font="--base"
 			justify-content="center"
+			height="100vh"
 		>
-			<Override slot="SectionContent" justify-content="center" />
+			<Override slot="SectionContent" justify-content="center" height="30vh" />
 			<Text as="h1" align-self="center">
 				Hello
 			</Text>
