@@ -1,10 +1,9 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Text, Icon, Box } from "@quarkly/widgets";
+import { Theme, Link, Text, Input } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Section } from "@quarkly/components";
-import { MdArrowDownward } from "react-icons/md";
+import { Override, Section } from "@quarkly/components";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"index"} />
@@ -21,13 +20,13 @@ export default (() => {
 			sm-padding="40px 0"
 			color="--light"
 			font="--base"
+			justify-content="center"
 		>
-			<Box text-align="center" margin="96px 0 0 0">
-				<Text margin="8px 0" text-transform="uppercase">
-					Who we are
-				</Text>
-				<Icon category="md" margin="0 auto" icon={MdArrowDownward} />
-			</Box>
+			<Override slot="SectionContent" justify-content="center" />
+			<Text as="h1" align-self="center">
+				Hello
+			</Text>
+			<Input background="#000000" border-color="#007fff" color="#ffffff" placeholder="Enter a command to begin..." />
 		</Section>
 		<Link
 			font={"--capture"}
